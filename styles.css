@@ -1,0 +1,98 @@
+body {
+    padding: 20px;
+    text-align: center;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background-color: bisque;
+    font-family: Arial, sans-serif;
+}
+
+header {
+    padding: 0.5rem;
+    width: 100%;
+    color: white;
+    background-color: black;
+}
+
+#ramen-menu {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+    gap: 20px;
+    padding: 20px;
+    max-width: 1200px;
+    width: 100%;
+}
+
+#ramen-menu img {
+    width: 100%;
+    height: 250px;
+    object-fit: cover;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+    cursor: pointer;
+}
+
+#ramen-menu img:hover {
+    transform: scale(1.05) translateY(-10px);
+    box-shadow: 0 10px 20px rgba(0,0,0,0.2);
+}
+
+#ramen-detail {
+    width: 0;
+    height: 0;
+    overflow: hidden;
+    background: #fff;
+    border-radius: 8px;
+    margin: 20px;
+    transition: all 0.3s ease;
+    opacity: 0;
+}
+
+#ramen-detail.expanded {
+    width: 300px;
+    height: auto;
+    padding: 20px;
+    opacity: 1;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+#new-ramen {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    max-width: 400px;
+    width: 100%;
+    padding: 20px;
+    background: #fff;
+    border-radius: 8px;
+    margin: 20px;
+    box-shadow: 0 5px 15px rgba(0,0,0,0.1);
+}
+
+input, textarea {
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    font-size: 16px;
+    width: 100%;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    padding: 12px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background-color 0.3s;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+h4 {
+    margin: 0;
+    color: #333;
+}
